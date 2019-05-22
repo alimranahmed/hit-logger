@@ -14,8 +14,11 @@ class HitLoggerServiceProvider extends ServiceProvider
     public function register()
     {
         $this->publishes([
-            __DIR__.'/../config/hit-logger.php' => config_path('hit-logger.php'),
+            __DIR__ . '/../config/hit-logger.php' => config_path('hit-logger.php'),
         ], 'config');
+
+        $this->app->singleton(LogSetting::class, config('hit-logger.log_setting'));
+        $this->app->singleton(LogWriter::class, config('hit-logger.log_writer'));
     }
 
     /**
@@ -25,9 +28,6 @@ class HitLoggerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->singleton(LogSetting::class, config('hit-logger.log_setting'));
-        $this->app->singleton(LogWriter::class, config('hit-logger.log_writer'));
-
-        $this->mergeConfigFrom(__DIR__.'/../config/hit-logger.php', 'hit-logger');
+        $this->mergeConfigFrom(__DIR__ . '/../config/hit-logger.php', 'hit-logger');
     }
 }
