@@ -13,6 +13,11 @@
     "require": {
         "php": "^7.1"
     },
+    "autoload": {
+        "psr-4": {
+            "AlImranAhmed\\HitLogger\\": "src"
+        }
+    },
     "config": {
         "sort-packages": true
     },
