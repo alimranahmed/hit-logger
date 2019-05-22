@@ -15,7 +15,7 @@ class HitLoggerServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/hit-logger.php' => config_path('hit-logger.php'),
-        ]);
+        ], 'config');
     }
 
     /**
