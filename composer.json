@@ -1,0 +1,26 @@
+{
+    "name": "alimranahmed/hit-logger",
+    "description": "Laravel 5 request and response logger. Highly encouraged from spatie/laravel-http-logger",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Al- Imran Ahmed",
+            "email": "al.imran.cse@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.1"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AlImranAhmed\\HitLogger\\HitLoggerServiceProvider"
+            ]
+        }
+    }
+}
