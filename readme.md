@@ -1,5 +1,5 @@
 ## Hit-Logger(Log Http Request and Response)
-A Laravel 5 package for logging http request and response. This package is highly encouraged by 
+A Laravel 5 package for logging http request and response. Built this package being highly encouraged by 
 [spatie/laravel-http-logger](https://github.com/spatie/laravel-http-logger). 
 
 ### Installation:
