@@ -23,7 +23,7 @@ class DefaultLogSetting implements LogSetting
         }
 
         foreach ($this->dontLogPaths as $dontLogPath) {
-            if ($this->isMatched($dontLogPath, $request->path())) {
+            if ($this->isMatched(ltrim($dontLogPath, '/'), $request->path())) {
                 return false;
             }
         }
