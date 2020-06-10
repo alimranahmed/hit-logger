@@ -20,7 +20,7 @@ class DefaultLogWriter implements LogWriter
 
         $headers = "- Header: ".json_encode($request->header());
 
-        $body = "- Body: ".json_encode($request->except(config('hit-logger.except')));
+        $body = "- Body: ".json_encode($request->except(config('hit-logger.except.fields')));
 
         $files = array_map(function (UploadedFile $file) {
             return $file->getClientOriginalName();

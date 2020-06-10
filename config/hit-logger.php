@@ -1,4 +1,5 @@
 <?php
+
 return [
     /**
      * Should implement the interface `\AlImranAhmed\HitLogger\LogSetting`
@@ -11,10 +12,16 @@ return [
     'log_writer' => \AlImranAhmed\HitLogger\DefaultLogWriter::class,
 
     /**
-     * Request fields that should never be logged
+     * Request fields or path(wildcard supported) that should never be logged
      */
     'except' => [
-        'password',
-        'password_confirmation'
-    ]
+        'fields' => [
+            'password',
+            'password_confirmation',
+        ],
+
+        'paths' => [
+
+        ],
+    ],
 ];
