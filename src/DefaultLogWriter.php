@@ -5,7 +5,6 @@ namespace AlImranAhmed\HitLogger;
 
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
@@ -33,7 +32,7 @@ class DefaultLogWriter implements LogWriter
         Log::info($message);
     }
 
-    public function logResponse(Request $request, Response $response)
+    public function logResponse(Request $request, $response)
     {
         $method = strtoupper($request->getMethod());
 
