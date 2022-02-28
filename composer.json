@@ -1,6 +1,6 @@
 {
     "name": "alimranahmed/hit-logger",
-    "description": "Laravel 5 request and response logger. Highly encouraged from spatie/laravel-http-logger",
+    "description": "Laravel request and response logger. Highly encouraged from spatie/laravel-http-logger",
     "license": "MIT",
     "authors": [
         {
@@ -11,7 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.1"
+        "php": "^7.1|^8.0.2"
     },
     "autoload": {
         "psr-4": {
